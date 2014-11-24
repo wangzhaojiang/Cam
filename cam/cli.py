@@ -8,6 +8,7 @@
 #  ------------------------------------
 import socket
 import cv2
+import sys
 import numpy
 
 def recvall(sock, count):
@@ -22,7 +23,8 @@ def recvall(sock, count):
     return buf
 
 def sock():
-    HOST = '127.0.0.1'
+    HOST = sys.argv[1]
+    #HOST = '192.168.1.14'
     PORT = 10000
     ADDR = (HOST, PORT)
 
